@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container1 {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+        }
+
+        .details {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender-details {
+            margin-top: 20px;
+        }
+
+        .category {
+            display: flex;
+        }
+
+        .category label {
+            margin-right: 20px;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left:300px">
+        <div class="container1">
+            <div class="content">
+                <form action="#" method="post"> <!-- Ensure you set method to POST -->
+                    {% csrf_token %} <!-- Include the CSRF token here -->
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">First Name</span>
+                            <input type="text" name="first_name" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Last Name</span>
+                            <input type="text" name="last_name" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Username</span>
+                            <input type="text" name="username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Password</span>
+                            <input type="password" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Confirm Password</span>
+                            <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Sign In">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

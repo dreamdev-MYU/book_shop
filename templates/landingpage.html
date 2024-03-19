@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <p>Kiring yoki ro'yxatdan o'ting</p>
+
+    <h1><a href="{% url 'users:register' %}">Register</a></h1>
+
+    <p>Or</p>
+
+    <h1><a href="{% url 'users:loginpage' %}">Login</a></h1>
+</body>
+</html>
